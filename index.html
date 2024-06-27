@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ambulance Trip maintain TNTJ</title>
+    <link rel="stylesheet" href="ui.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" type="image/png" href="favicon.jpeg" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="loader"></div>
+    </div>
+    <div id="Donar_reg_form" class="Reg_form_iframe">
+      <i
+        class="fa fa-times fa-3x close"
+        style="float: right; color: rgba(245, 234, 234, 0.801); cursor: pointer"
+      ></i>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSeSGj0qKFSKdDRPS4e7I5G1wVY1BJTH4nYy-4_wUe6R45vHlg/viewform"
+        title="REG_FORM"
+      ></iframe>
+    </div>
+    <div class="wrapper">
+      <header>
+        <nav>
+          <div class="menu-icon">
+            <i class="fa fa-bars fa-2x" id="menu"></i>
+          </div>
+
+          <div class="logo">TNTJ THANJAI-SOUTH</div>
+
+          <div class="menu">
+            <ul>
+              <!-- <li><a href="#">Home</a></li> -->
+              <li><a href="#" id="reg">Ambulance Trip Register</a></li>
+              <li>
+                <a href="#" id="Reg_btnLink">Ambulance Trip History</a>
+              </li>
+              <li>
+                <a
+                  href="mailto:ithris615@yahoo.com"
+                  target="_blank"
+                  onclick="return confirm('Do you want to Contact Us? ')"
+                  >Contact US</a
+                >
+              </li>
+
+              <li style="font-weight: bolder" class="copyRight">
+                TNTJ THANJAI-SOUTH COPYRIGHT©2024
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div id="i_frame">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeSGj0qKFSKdDRPS4e7I5G1wVY1BJTH4nYy-4_wUe6R45vHlg/viewform"
+          title="REG_FORM"
+          style="height: 100vh; width: 100%"
+        ></iframe>
+      </div>
+      <div class="container" id="container">
+        <div>
+          <select id="DriverName" required>
+            <option
+              value=""
+              style="background-color: var(--violet); color: var(--white)"
+              selected
+              disabled
+            >
+              --select Driver Name--
+            </option>
+            <option value="all">All</option>
+          </select>
+        </div>
+        <button id="search" type="submit">Search</button>
+      </div>
+
+      <div class="table-container" aria-describedby="tooltip">
+        <div id="err"></div>
+        <table id="table-id">
+          <thead>
+            <tr id="thead"></tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <div role="tooltip" id="tooltip">
+        <marquee>Scroll Left... </marquee>
+      </div>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
